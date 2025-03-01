@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 export default function Navbar(props){
     return(
-        <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
+        <nav className={`navbar navbar-expand-lg bg-${props.mode} navbar-${props.mode}`}>
         <div className="container-fluid">
             <a className="navbar-brand" href="/">{props.title}</a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"    aria-expanded="false" aria-label="Toggle navigation">
@@ -20,6 +20,10 @@ export default function Navbar(props){
                 <li className="nav-item">
                 <a className="nav-link" href="/">Pricing</a>
                 </li>
+                <div class="form-check form-switch">
+                   <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+                   <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
+                </div>
             </ul>
         </div>
     </div>

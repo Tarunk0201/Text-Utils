@@ -50,7 +50,7 @@ export default function TextForm(props){
             <button className="btn btn-success mx-2" onClick={handleLoClick}> Convert to lowercase </button>
             <button className="btn btn-success mx-2" onClick={handleClear}> Clear Text </button>
             <button className="btn btn-success mx-2" onClick={handleCopy}> Copy Text </button>
-            <button className="btn btn-success mx-2" onClick={handleExtraSpace}> Extra Space </button>
+            <button className="btn btn-success mx-2" onClick={handleExtraSpace}>Remove Extra Space </button>
         </div>
         <div className="container">
             <h1>Your text Summary</h1>

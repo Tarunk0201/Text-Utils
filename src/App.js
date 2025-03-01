@@ -1,4 +1,5 @@
 
+import React, { useState } from 'react';
 import './App.css';
 import Navbar from './camponent/Navbar';
 import TextForm from './camponent/TextForm';
@@ -6,9 +7,12 @@ import TextForm from './camponent/TextForm';
 
 
 function App() {
+
+  const [mode, setMode] = useState(`dark`);
+  
   return (
     <>
-    <Navbar title="TextUtils"></Navbar>
+    <Navbar title="TextUtils" mode={mode}></Navbar>
     <TextForm />
     {/* <About/> */}
     </>
