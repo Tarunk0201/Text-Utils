@@ -25,6 +25,14 @@ export default function TextForm(props){
         navigator.clipboard.writeText(typo.value);
     }
 
+    const handlePaste = () => {
+        console.log("I am paste");
+        let typo = document.getElementById("myBox");
+        navigator.clipboard.readText().then((text) => {
+            typo.value = text;
+        });
+    };
+
     const handleExtraSpace = () => {
         console.log("I am ExtraSpace");
         let newText = text.split(/[ ]+/);
@@ -41,18 +49,19 @@ export default function TextForm(props){
 
     return(
         <>
-        <div className="container">
+        <div className="container" style={{color: props.mode==='dark'?'white':'black' }} >
             <h1 htmlFor="myBox" className="form-label">Text here</h1>
             <div className="mb-3">
-                <textarea type="text" value={text} onChange={handleOnChange} className="form-control" id="myBox" placeholder="Enter your text" row="8"></textarea>
+                <textarea type="text" value={text} onChange={handleOnChange} style={{backgroundColor: props.mode==='dark'?'#DCD7C9':'white', }} className="form-control" id="myBox" placeholder="Enter your text" row="8"></textarea>
             </div>
             <button className="btn btn-success mx-2" onClick={handleUPClick}> Convert to Uppercase </button>
             <button className="btn btn-success mx-2" onClick={handleLoClick}> Convert to lowercase </button>
             <button className="btn btn-success mx-2" onClick={handleClear}> Clear Text </button>
             <button className="btn btn-success mx-2" onClick={handleCopy}> Copy Text </button>
+            <button className="btn btn-success mx-2" onClick={handlePaste}> Past Text </button>
             <button className="btn btn-success mx-2" onClick={handleExtraSpace}>Remove Extra Space </button>
         </div>
-        <div className="container">
+        <div className="container" style={{color: props.mode==='dark'?'white':'black' }} >
             <h1>Your text Summary</h1>
             <p>{text.split(' ').length} words and {text.length} charachters</p>
             <p>Time to read {0.008 * text.split(" ").length}</p>

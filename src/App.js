@@ -8,13 +8,23 @@ import TextForm from './camponent/TextForm';
 
 function App() {
 
-  const [mode, setMode] = useState(`dark`);
-  
+  const [mode, setMode] = useState(`light`);
+
+  const toggleMode = ()=> {
+    if(mode === 'light'){
+    setMode('dark');
+    document.body.style.backgroundColor = '#3F4F44'
+  } else{
+    setMode('light');
+    document.body.style.backgroundColor = 'white'
+  }
+  }
+
   return (
     <>
-    <Navbar title="TextUtils" mode={mode}></Navbar>
-    <TextForm />
-    {/* <About/> */}
+      <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} ></Navbar>
+      <TextForm mode={mode}/>
+      {/* <About/> */}
     </>
   );
 }
