@@ -5,17 +5,20 @@ export default function TextForm(props){
         console.log("I am Upper Case");
         let newText = text.toUpperCase();
         setText(newText);
+        props.showAlert("Converted to Uppercase", "success")
     }
     const handleLoClick = () => {
         console.log("I am lower Case");
         let newText = text.toLowerCase();
         setText(newText);
+        props.showAlert("Converted to Lowercase", "success")
     }
 
     const handleClear = () => {
         console.log("I am Clear");
         let newText = "";
         setText(newText);
+        props.showAlert("text cleared", "success")
     }
 
     const handleCopy = () => {
@@ -23,6 +26,7 @@ export default function TextForm(props){
         let typo = document.getElementById("myBox");
         typo.select();
         navigator.clipboard.writeText(typo.value);
+        props.showAlert("Copyed to clipboard", "success")
     }
 
     const handlePaste = () => {
@@ -30,6 +34,7 @@ export default function TextForm(props){
         let typo = document.getElementById("myBox");
         navigator.clipboard.readText().then((text) => {
             typo.value = text;
+            props.showAlert("Pasted from clipboard", "success")
         });
     };
 
@@ -37,6 +42,7 @@ export default function TextForm(props){
         console.log("I am ExtraSpace");
         let newText = text.split(/[ ]+/);
         setText(newText.join(" "));
+        props.showAlert("Extra space has bean removed", "success")
     }
 
 
