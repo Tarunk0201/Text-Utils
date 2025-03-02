@@ -1,10 +1,11 @@
 
 import React, { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import Navbar from './camponent/Navbar';
 import TextForm from './camponent/TextForm';
 import Alert from './camponent/Alert';
-// import About from './camponent/About';
+import About from './camponent/About';
 
 
 function App() {
@@ -35,8 +36,10 @@ function App() {
     <>
       <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} ></Navbar>
       <Alert alert={alert} mode={mode}/>
-      <TextForm showAlert={showAlert} mode={mode}/>
-      {/* <About/> */}
+      <Routes>
+          <Route exact path="/" element={<TextForm showAlert={showAlert} mode={mode}/>} />
+          <Route exact path="/about" element={<About />} />
+      </Routes>
     </>
   );
 }
