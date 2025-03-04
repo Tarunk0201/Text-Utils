@@ -2,27 +2,23 @@ import React, {useState} from "react"
 
 export default function TextForm(props){
     const handleUPClick = () => {
-        console.log("I am Upper Case");
         let newText = text.toUpperCase();
         setText(newText);
         props.showAlert("Converted to Uppercase", "success")
     }
     const handleLoClick = () => {
-        console.log("I am lower Case");
         let newText = text.toLowerCase();
         setText(newText);
         props.showAlert("Converted to Lowercase", "success")
     }
 
     const handleClear = () => {
-        console.log("I am Clear");
         let newText = "";
         setText(newText);
         props.showAlert("text cleared", "success")
     }
 
     const handleCopy = () => {
-        console.log("I am copy");
         let typo = document.getElementById("myBox");
         typo.select();
         navigator.clipboard.writeText(typo.value);
@@ -30,7 +26,6 @@ export default function TextForm(props){
     }
 
     const handlePaste = () => {
-        console.log("I am paste");
         let typo = document.getElementById("myBox");
         navigator.clipboard.readText().then((text) => {
             typo.value = text;
@@ -39,7 +34,6 @@ export default function TextForm(props){
     };
 
     const handleExtraSpace = () => {
-        console.log("I am ExtraSpace");
         let newText = text.split(/[ ]+/);
         setText(newText.join(" "));
         props.showAlert("Extra space has bean removed", "success")
@@ -47,7 +41,6 @@ export default function TextForm(props){
 
 
     const handleOnChange = (event) => {
-        console.log("onchange is clicked");
        setText(event.target.value);
     }
 
