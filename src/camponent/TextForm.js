@@ -53,12 +53,12 @@ export default function TextForm(props){
             <div className="mb-3">
                 <textarea type="text" value={text} onChange={handleOnChange} style={{backgroundColor: props.mode==='dark'?'#DCD7C9':'white', }} className="form-control" id="myBox" placeholder="Enter your text" row="8"></textarea>
             </div>
-            <button className={`btn btn-${props.mode==='dark'?'success':'info'} mx-2`} onClick={handleUPClick}> Convert to Uppercase </button>
-            <button className={`btn btn-${props.mode==='dark'?'success':'info'} mx-2`} onClick={handleLoClick}> Convert to lowercase </button>
-            <button className={`btn btn-${props.mode==='dark'?'success':'info'} mx-2`} onClick={handleClear}> Clear Text </button>
-            <button className={`btn btn-${props.mode==='dark'?'success':'info'} mx-2`} onClick={handleCopy}> Copy Text </button>
-            <button className={`btn btn-${props.mode==='dark'?'success':'info'} mx-2`} onClick={handlePaste}> Past Text </button>
-            <button className={`btn btn-${props.mode==='dark'?'success':'info'} mx-2`} onClick={handleExtraSpace}>Remove Extra Space </button>
+            <button className={`btn btn-${props.mode==='dark'?'success':'info'} mx-2 my-1`} onClick={handleUPClick}> Convert to Uppercase </button>
+            <button className={`btn btn-${props.mode==='dark'?'success':'info'} mx-2 my-1`} onClick={handleLoClick}> Convert to lowercase </button>
+            <button className={`btn btn-${props.mode==='dark'?'success':'info'} mx-2 my-1`} onClick={handleClear}> Clear Text </button>
+            <button className={`btn btn-${props.mode==='dark'?'success':'info'} mx-2 my-1`} onClick={handleCopy}> Copy Text </button>
+            <button className={`btn btn-${props.mode==='dark'?'success':'info'} mx-2 my-1`} onClick={handlePaste}> Past Text </button>
+            <button className={`btn btn-${props.mode==='dark'?'success':'info'} mx-2 my-1`} onClick={handleExtraSpace}>Remove Extra Space </button>
         </div>
         <div className="container" style={{color: props.mode==='dark'?'white':'black' }} >
             <h1>Your text Summary</h1>

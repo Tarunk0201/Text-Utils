@@ -7,8 +7,8 @@ const About = (props) => {
       <p className="lead">
         TextUtils is a simple yet powerful text manipulation tool that helps
         you perform various operations on your text efficiently. Whether you
-        need to **convert text to uppercase/lowercase, remove extra spaces, or
-        count words and characters**, TextUtils has got you covered!
+        need to convert text to uppercase/lowercase, remove extra spaces, or
+        count words and characters, TextUtils has got you covered!
       </p>
 
       <h2 className="mt-4">🌟 Features</h2>
