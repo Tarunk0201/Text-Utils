@@ -56,7 +56,6 @@ export default function TextForm(props){
             </div>
             <button disabled={text.length === 0} className={`btn btn-${props.mode==='dark'?'success':'info'} mx-2 my-1`} onClick={handleUPClick}> Convert to Uppercase </button>
             <button disabled={text.length === 0} className={`btn btn-${props.mode==='dark'?'success':'info'} mx-2 my-1`} onClick={handleLoClick}> Convert to lowercase </button>
-            <button disabled={text.length === 0} className={`btn btn-${props.mode==='dark'?'success':'info'} mx-2 my-1`} onClick={handleLoClick}> Convert to lowercase </button>
             <button disabled={text.length === 0} className={`btn btn-${props.mode==='dark'?'success':'info'} mx-2 my-1`} onClick={handleClear}> Clear Text </button>
             <button disabled={text.length === 0} className={`btn btn-${props.mode==='dark'?'success':'info'} mx-2 my-1`} onClick={handleCopy}> Copy Text </button>
             <button className={`btn btn-${props.mode==='dark'?'success':'info'} mx-2 my-1`} onClick={handlePaste}> Past Text </button>
